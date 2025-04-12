@@ -83,8 +83,7 @@ const mockReservations: Reservation[] = [
 ];
 
 const ReservationTable = () => {
-  const [reservations, setReservations] =
-    useState<Reservation[]>(mockReservations);
+  const [reservations] = useState<Reservation[]>(mockReservations);
   const [dateFilter, setDateFilter] = useState("");
   const [timeFilter, setTimeFilter] = useState("");
   const [notificationsEnabled, setNotificationsEnabled] = useState(false);

@@ -86,8 +86,8 @@ const ReservationForm = ({ timeSlotCapacity }: ReservationFormProps) => {
     );
 
     if (!isAvailable) {
-      toast.error(
-        `We're sorry, but this time slot is at capacity. Please select another time or contact us directly.`,
+      toast.warning(
+        `Limited availability! Only ${remainingSeats} seats left for this time.`,
         {
           duration: 7000,
         }

@@ -147,7 +147,7 @@ const menuCategories: MenuCategory[] = [
 ];
 
 const Menu = () => {
-  const [activeCategory, setActiveCategory] = useState(menuCategories[0].id);
+  const [_activeCategory, setActiveCategory] = useState(menuCategories[0].id);
 
   return (
     <section id="menu" className="py-20 bg-restaurant-cream">
@@ -181,7 +181,7 @@ const Menu = () => {
             <TabsContent key={category.id} value={category.id} className="mt-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {category.items
-                  .filter((item, index) => index % 2 === 0)
+                  .filter((_item, index) => index % 2 === 0)
                   .map((item, idx) => (
                     <div
                       key={`${category.id}-left-${idx}`}
@@ -218,7 +218,7 @@ const Menu = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {category.items
-                  .filter((item, index) => index % 2 === 1)
+                  .filter((_item, index) => index % 2 === 1)
                   .map((item, idx) => (
                     <div
                       key={`${category.id}-right-${idx}`}

@@ -95,9 +95,9 @@ const StaffManagement = ({ timeSlotCapacity }: StaffManagementProps) => {
     });
   };
 
-  const toggleReportView = () => {
-    setIsReportView(!isReportView);
-  };
+  // const _toggleReportView = () => {
+  //   setIsReportView(!isReportView);
+  // };
 
   if (!isStaffAuthenticated) {
     return (
