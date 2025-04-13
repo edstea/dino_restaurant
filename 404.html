@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      const segment = 1;
+      const redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+        history.replaceState(null, null, redirect);
+      } else {
+        const path = location.pathname.substring(segment).replace(/\/$/, "");
+        window.location = path
+          ? "/dino_restaurant/#" + path
+          : "/dino_restaurant/#/";
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
